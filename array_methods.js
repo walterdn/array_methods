@@ -1,5 +1,5 @@
 exports.push = function(myArr) {
-	for (var i=1; i<arguments.length; i++) {
+	for (var i=1; i<arguments.length; i++) { //push(myArr, 5) arguments = [myArr, 5]
 		myArr[myArr.length] = arguments[i];
 	}
 	return myArr.length;
@@ -38,7 +38,6 @@ exports.unshift = function(myArr) {
 exports.unique = function(myArr) {
 	var uniqArr = [];
 	var alreadyInUniq;
-	var counter = 0;
 
 	for (i=0; i<myArr.length; i++) {
 		alreadyInUniq = false;
@@ -46,8 +45,7 @@ exports.unique = function(myArr) {
 			if (myArr[i] == uniqArr[j]) alreadyInUniq = true;
 		}
 		if (!alreadyInUniq) {
-			uniqArr[counter] = myArr[i]; 
-			counter++;
+			uniqArr[uniqArr.length] = myArr[i];
 		}
 	}
 	return uniqArr;
@@ -58,7 +56,6 @@ exports.frequency2 = function(wordArr) {
 	function unique(myArr) {
 		var uniqArr = [];
 		var alreadyInUniq;
-		var counter = 0;
 
 		for (i=0; i<myArr.length; i++) {
 			alreadyInUniq = false;
@@ -66,8 +63,7 @@ exports.frequency2 = function(wordArr) {
 				if (myArr[i] == uniqArr[j]) alreadyInUniq = true;
 			}
 			if (!alreadyInUniq) {
-				uniqArr[counter] = myArr[i]; 
-				counter++;
+				uniqArr[uniqArr.length] = myArr[i]; 
 			}
 		}
 		return uniqArr;
@@ -76,7 +72,6 @@ exports.frequency2 = function(wordArr) {
 	function setLetterCounts(myArr, letterCounts) { //works very similarly to unique function, except it keeps a count of every duplicate it finds and returns an array with the counts.
 		var uniqArr = [];
 		var alreadyInUniq;
-		var counter = 0;
 
 		for (i=0; i<myArr.length; i++) {
 			alreadyInUniq = false;
@@ -87,8 +82,7 @@ exports.frequency2 = function(wordArr) {
 				}	
 			}
 			if (!alreadyInUniq) {
-				uniqArr[counter] = myArr[i]; 
-				counter++;
+				uniqArr[uniqArr.length] = myArr[i]; 
 			}
 		}
 		return letterCounts;
@@ -97,7 +91,7 @@ exports.frequency2 = function(wordArr) {
 	//concatenate every word in array into one string
 	var string = '';
 	for (var i=0; i<wordArr.length; i++) {
-		string += wordArr[i];
+		string += wordArr[i]; 
 	}
 
 	//converts string into an array where each element is one character of string

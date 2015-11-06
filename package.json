@@ -1,0 +1,17 @@
+{
+  "name": "array_methods",
+  "version": "0.1.0",
+  "description": "Re-implents push, pop, shift, and unshift array methods. Also includes fucntions unique and frequency2.",
+  "main": "array_methods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Walter Nicholas",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-mocha": "^2.1.3"
+  }
+}
